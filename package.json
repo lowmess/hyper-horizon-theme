@@ -6,7 +6,7 @@
   "description": "A beautifully warm dark theme for Hyper, based on Horizon Theme VSCode by Jolaleye",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thedoomshine/hyper-horizon-theme",
+    "url": "https://github.com/thedoomshine/hyper-horizon-theme"
   },
   "keywords": [
     "hyperterm",
@@ -21,6 +21,6 @@
     "warm",
     "dark"
   ],
-  "author": "Morgan Blackhurst <morganblackhurst@gmail.com",
+  "author": "Morgan Blackhurst <morganblackhurst@gmail.com>",
   "license": "MIT"
 }
