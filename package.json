@@ -1,0 +1,26 @@
+{
+  "name": "hyper-horizon-theme",
+  "version": "0.5.0",
+  "main": "index.js",
+  "homepage": "https://github.com/thedoomshine/hyper-horizon-theme",
+  "description": "A beautifully warm dark theme for Hyper, based on Horizon Theme VSCode by Jolaleye",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thedoomshine/hyper-horizon-theme",
+  },
+  "keywords": [
+    "hyperterm",
+    "hyper",
+    "hyper.app",
+    "horizon",
+    "horizon theme",
+    "hyper horizon",
+    "warm dark",
+    "dark theme",
+    "dark theme",
+    "warm",
+    "dark"
+  ],
+  "author": "Morgan Blackhurst <morganblackhurst@gmail.com",
+  "license": "MIT"
+}
