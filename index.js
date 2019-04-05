@@ -5,32 +5,28 @@
 
 
 exports.decorateConfig = config => {
-  config.backgroundColor = '#1C1E26';
-  config.foregroundColor = '#ECEFF1';
-  config.borderColor = '#37474F';
-  config.padding = '24px 24px';
+  const colors = {
+    black: '#1C1E26',
+    red: '#E95378',
+    green: '#29D398',
+    yellow: '#FAB795',
+    blue: '#26BBD9',
+    magenta: '#EE64AC',
+    cyan: '#59E1E3',
+    white: '#D5D8DA',
+    lightBlack: '#6C6F9399',
+    lightRed: '#EC6A88',
+    lightGreen: '#3FDAA4',
+    lightYellow: '#FBC3A7',
+    lightBlue: '#3FC4DE',
+    lightMagenta: '#F075B5',
+    lightCyan: '#6BE4E6',
+    lightWhite: '#ffffff'
+  }
 
-  return Object.assign({}, config, {
-    cursorColor: colors.red,
-    colors: {
-      black: '#1C1E26',
-      red: '#E95378',
-      green: '#29D398',
-      yellow: '#FAB795',
-      blue: '#26BBD9',
-      magenta: '#EE64AC',
-      cyan: '#59E1E3',
-      white: '#D5D8DA',
-      lightBlack: '#6C6F9399',
-      lightRed: '#EC6A88',
-      lightGreen: '#3FDAA4',
-      lightYellow: '#FBC3A7',
-      lightBlue: '#3FC4DE',
-      lightMagenta: '#F075B5',
-      lightCyan: '#6BE4E6',
-      lightWhite: '#ffffff'
-    },
-    termCSS: `
+  const cursorColor = colors.red
+
+  const termCSS = `
       .xterm-text-layer a {
         text-decoration: underline !important;
         color: ${colors.yellow} !important;
@@ -53,8 +49,8 @@ exports.decorateConfig = config => {
       *::-webkit-scrollbar-thumb:window-inactive {
         background: transparent;
       }
-    `,
-    css: `
+    `
+  const css = `
       .hyper_main {
         border: none;
       }
@@ -112,5 +108,11 @@ exports.decorateConfig = config => {
         background-color: ${colors.lightBlack} !important;
       }
     `
+  
+  return Object.assign({}, config, {
+    cursorColor,
+    colors,
+    termCSS,
+    css
   });
 };
