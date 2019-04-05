@@ -109,7 +109,7 @@ exports.decorateConfig = config => {
       }
 
       .splitpane_divider {
-        background-color: ${colors.black} !important;
+        background-color: ${colors.lightBlack} !important;
       }
     `
   });
