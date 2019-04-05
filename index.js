@@ -11,7 +11,7 @@ exports.decorateConfig = config => {
   config.padding = '24px 24px';
 
   return Object.assign({}, config, {
-    cursorColor: '#E95378',
+    cursorColor: colors.red,
     colors: {
       black: '#1C1E26',
       red: '#E95378',
@@ -33,7 +33,7 @@ exports.decorateConfig = config => {
     termCSS: `
       .xterm-text-layer a {
         text-decoration: underline !important;
-        color: #FAB795E6 !important;
+        color: ${colors.yellow} !important;
       }
 
       *::-webkit-scrollbar {
@@ -64,13 +64,20 @@ exports.decorateConfig = config => {
       }
 
       .tab_tab {
-        border: none;
-        color: #6C6F9380;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        color: ${colors.lightBlack};
         background-color: transparent;
+        border-bottom-color: ${colors.red};
+      }
+
+      .tab_tab + .tab_tab {
+        border-left-color: ${colors.lightBlack};
       }
 
       .tab_tab:hover {
-        background-color: transparent;
+        background-color: ${colors.lightBlack};
       }
 
       .tab_tab::before {
@@ -80,13 +87,13 @@ exports.decorateConfig = config => {
         left: 0;
         right: 0;
         height: 2px;
-        background-color: '#E95378';
+        background-color: ${colors.red};
         transform: scaleX(0);
         transition: none;
       }
 
       .tab_tab.tab_active {
-        color: #D5D8DA;
+        color: ${colors.white};
       }
 
       .tab_tab.tab_active::before {
@@ -102,7 +109,7 @@ exports.decorateConfig = config => {
       }
 
       .splitpane_divider {
-        background-color: #1A1C23 !important;
+        background-color: ${colors.black} !important;
       }
     `
   });
