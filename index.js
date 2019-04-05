@@ -22,18 +22,22 @@ exports.decorateConfig = config => {
     lightCyan: '#6BE4E6',
     lightWhite: '#ffffff',
     transparentRed: 'rgba(233, 83, 120, 0.2)',
-    transparentWhite: 'rgba(255, 255, 255, 0.2)'
+    transparentWhite: 'rgba(255, 255, 255, .05)'
   };
 
   const css = `
+    .hyper_main {
+      // border: none !important;
+    }
+
     .tabs_borderShim {
-      display: none;
+      border-color: transparent !important;
     }
 
     .tab_tab {
       background-color: transparent;
       border: 0;
-      color: ${colors.lightBlack};
+      color: ${colors.white};
     }
 
     .tab_tab:hover {
@@ -41,7 +45,6 @@ exports.decorateConfig = config => {
     }
 
     .tab_tab::before {
-      background-color: transparent;
       bottom: 0;
       content: '';
       height: 2px;
@@ -50,12 +53,15 @@ exports.decorateConfig = config => {
       right: 0;
     }
 
-    .tab_tab.tab_active {
-      color: ${colors.white};
+    .tab_text {
+      border-color: transparent;
+      border-style: solid;
+      border-width: 1px;
     }
 
-    .tab_tab.tab_active::before {
-      background-color: ${colors.red};
+    .tab_textActive {
+      border-bottom-color: ${colors.red};
+      color: ${colors.lightWhite}
     }
 
     .tab_textInner {

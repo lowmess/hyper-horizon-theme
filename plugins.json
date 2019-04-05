@@ -2,7 +2,7 @@
   "name": "hyper-horizon-theme",
   "description": "A beautifully warm dark theme for Hyper, based on Horizon Theme VSCode by Jolaleye",
   "type": "theme",
-  "preview": "",
+  "preview": "https://github.com/thedoomshine/hyper-horizon-theme/blob/master/hyper-horizon-theme.png",
   "colors": [
     "#1C1E26",
     "#D5D8DA",
