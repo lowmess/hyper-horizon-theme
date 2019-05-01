@@ -77,6 +77,7 @@ exports.decorateConfig = config => {
       background-color: ${colors.lightBlack} !important;
     }
   `;
+
   const termCSS = `
     ${config.termCSS || ''}
 
@@ -104,15 +105,22 @@ exports.decorateConfig = config => {
     }
   `;
 
-  config.backgroundColor = config.backgroundColor || colors.black;
-  config.foregroundColor = config.foregroundColor || colors.white;
-  config.borderColor = config.borderColor || colors.black;
-  config.cursorAccentColor = config.cursorAccentColor || colors.black;
-  config.cursorColor = config.cursorColor || colors.red;
-  config.selectionColor = config.selectionColor || colors.transparentRed;
-  config.padding = config.padding || '12px 24px';
+  const backgroundColor = colors.black;
+  const foregroundColor = colors.white;
+  const borderColor = colors.black;
+  const cursorAccentColor = colors.black;
+  const cursorColor = colors.red;
+  const selectionColor = colors.transparentRed;
+  const padding = '12px 24px';
 
   return Object.assign({}, config, {
+    backgroundColor,
+    foregroundColor,
+    borderColor,
+    cursorColor,
+    cursorAccentColor,
+    selectionColor,
+    padding,
     colors,
     termCSS,
     css
