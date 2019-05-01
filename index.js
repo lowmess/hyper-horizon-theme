@@ -26,6 +26,8 @@ exports.decorateConfig = config => {
   };
 
   const css = `
+    ${config.css || ''}
+  
     .hyper_main {
       // border: none !important;
     }
@@ -76,6 +78,8 @@ exports.decorateConfig = config => {
     }
   `;
   const termCSS = `
+    ${config.termCSS || ''}
+
     .xterm-text-layer a {
       text-decoration: underline !important;
       color: ${colors.yellow} !important;
@@ -100,13 +104,13 @@ exports.decorateConfig = config => {
     }
   `;
 
-  config.backgroundColor = colors.black;
-  config.foregroundColor = colors.white;
-  config.borderColor = colors.black;
-  config.cursorAccentColor = colors.black;
-  config.cursorColor = colors.red;
-  config.selectionColor = colors.transparentRed;
-  config.padding = '12px 24px';
+  config.backgroundColor = config.backgroundColor || colors.black;
+  config.foregroundColor = config.foregroundColor || colors.white;
+  config.borderColor = config.borderColor || colors.black;
+  config.cursorAccentColor = config.cursorAccentColor || colors.black;
+  config.cursorColor = config.cursorColor || colors.red;
+  config.selectionColor = config.selectionColor || colors.transparentRed;
+  config.padding = config.padding || '12px 24px';
 
   return Object.assign({}, config, {
     colors,
